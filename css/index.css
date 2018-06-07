@@ -1,0 +1,170 @@
+header, section {
+	display: inline-block;
+}
+
+.left {
+	float: left;
+	width: 35%;
+}
+
+.right {
+	float: right;
+	width: 60%;
+}
+
+#headshot {
+	display: block;
+	text-align: center;
+	margin: 50px auto 0;
+	border: 2px solid #E13A63;
+}
+
+.experience {
+	display: inline-block;
+	clear: both;
+	margin-top: 30px;
+	text-align: center;
+}
+
+header, .experience {
+	border: 2px solid #E13A63;
+	padding: 10px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsiblecontent {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width:800px) {
+
+	header {
+		display: block;
+	}
+
+/*stop float */
+	.left,.right {
+		float: none;
+		width: 100%;
+	}
+
+	/*create foldable button, better mobile usability  */
+/*	button.accordion {
+		background-color: red;
+		color: white;
+		cursor: pointer;
+		padding: 5px;
+		width: 100%;
+		border: none;
+		text-align:
+		outline: none;
+		font-size: 16px;
+		transition: 0.4s;
+	}
+	button.accordion.active, button.accordion:hover {
+		background-color: black;
+	}
+	div.panel {
+		padding: 0 18px;
+		background-color: green;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+	.extra p {
+		overflow: hidden;
+		max-height: 0em;
+		margin: 0;
+		padding: 0;
+		text-align: justify;
+	}
+
+	.extra a {
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		padding: 5px;
+		background: blue;
+		border-bottom: 1px solid black;
+
+	}
+	.extra:target p {
+		max-height: 20em;
+		padding: 10px;
+	} */
+	.read-more-state {
+	  display: none;
+	}
+
+	.read-more-target {
+	  opacity: 0;
+	  max-height: 0;
+	  font-size: 0;
+	  transition: .25s ease;
+	}
+
+	.read-more-state:checked ~ .read-more-wrap .read-more-target {
+	  opacity: 1;
+	  font-size: inherit;
+	  max-height: 999em;
+	}
+
+	.read-more-state ~ .read-more-trigger:before {
+	  content: 'Show more';
+	}
+
+	.read-more-state:checked ~ .read-more-trigger:before {
+	  content: 'Show less';
+	}
+
+	.read-more-trigger {
+	  cursor: pointer;
+	  display: inline-block;
+	  padding: 0 .5em;
+	  color: #666;
+	  font-size: .9em;
+	  line-height: 2;
+	  border: 1px solid #ddd;
+	  border-radius: .25em;
+	}
+
+	/* Other style */
+	body {
+	  padding: 2%;
+	}
+
+	p {
+	  padding: 2%;
+	  color: #00041F;
+	  border: 1px solid #fce29f;
+	  border-radius: .25em;
+	}
+	.skills {
+		border: 2px solid #E13A63;:
+	}
+	.history {
+		border: 2px solid #E13A63;
+		background-color: #B8FFFB;
+	}
+}
